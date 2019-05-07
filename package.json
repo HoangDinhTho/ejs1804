@@ -1,0 +1,13 @@
+{
+  "name": "ejs1804",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/huongnguyen08/ejs1804.git",
+  "author": "<huongnguyenak96@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
+}
