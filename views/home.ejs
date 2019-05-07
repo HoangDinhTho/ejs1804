@@ -28,17 +28,22 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <% listSinger.forEach(singer=>{
+                            %>
                             <tr>
-                                <td>1</td>
-                                <td>Chi Pu</td>
+                                <td><%=singer.id%></td>
                                 <td>
-                                    <img height="150px" src="https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/avatars/a/9/e/1/a9e14b98a59c41799490cc1cf6b3de63.jpg">
+                                    <a target="_blank" href="<%=profileLink+singer.link%>"><%=singer.name%></a>
+                                </td>
+                                <td>
+                                    <img height="150px" src="<%=avatarLink+singer.avatar%>">
                                 </td>
                                 <td>
                                     <a href="" class="btn btn-warning">Update</a>
                                     <a href="" class="btn btn-danger">Delete</a>
                                 </td>
                             </tr>
+                            <% })%>
                         </tbody>
                     </table>
                 </div>
