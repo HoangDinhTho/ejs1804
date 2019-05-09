@@ -39,7 +39,14 @@ app.get('/update/:id',(req,res)=>{
 })
 app.post('/update',(req,res)=>{
     const { id, name, link, avatar } = req.body
-    // res.send({id, name, link, avatar})
+    const singer = listSinger.find(singer=>singer.id==id)
+    if(!singer) res.send({error:'Cannot find singer!'})
+    
+    // singer.name = name;
+    // singer.link = link;
+    // singer.avatar = avatar;
+    singer.updateData(name,link,avatar);
+    res.redirect('/');
 })
 
 app.listen(3000);

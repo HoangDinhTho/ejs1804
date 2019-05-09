@@ -5,6 +5,11 @@ class Singer{
         this.link = link;
         this.avatar = avatar;
     }
+    updateData(name, link, avatar){
+        this.name = name;
+        this.link = link;
+        this.avatar = avatar;
+    }
 } 
 const avatarLink = 'https://photo-resize-zmp3.zadn.vn/w240_r1x1_jpeg/avatars/';
 const profileLink = 'https://zingmp3.vn/nghe-si/';
