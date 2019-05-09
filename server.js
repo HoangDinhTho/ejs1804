@@ -35,7 +35,11 @@ app.get('/update/:id',(req,res)=>{
     if(!singer) {
         return res.send({error: 'Cannot find singer!'})
     }
-    res.render('update',singer);
+    res.render('update',{singer})
+})
+app.post('/update',(req,res)=>{
+    const { id, name, link, avatar } = req.body
+    // res.send({id, name, link, avatar})
 })
 
 app.listen(3000);

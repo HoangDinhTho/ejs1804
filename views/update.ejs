@@ -12,21 +12,24 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-6">
-                <h2 class="text-center">Update singer ???</h2>
+                <h2 class="text-center">Update singer 
+                <i><%=singer.name%></i>
+                </h2>
                 <form method="POST" action="/update">
+                    <input type="hidden" name="id" value="<%=singer.id%>">
                     <div class="form-group">
                         <label>Name</label>
-                        <input type="text" class="form-control" name="name" placeholder="Enter name">
+                        <input type="text" class="form-control" name="name" placeholder="Enter name" value="<%=singer.name%>">
                     </div>
                     <div class="form-group">
                         <label>Link</label>
-                        <input type="text" class="form-control" name="link" placeholder="Enter link">
+                        <input type="text" class="form-control" name="link" placeholder="Enter link" value="<%=singer.link%>">
                     </div>
                     <div class="form-group">
                         <label>Avatar</label>
-                        <input type="text" class="form-control" name="avatar" placeholder="Enter avatar">
+                        <input type="text" class="form-control" name="avatar" placeholder="Enter avatar" value="<%=singer.avatar%>">
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary">Update</button>
                 </form>
             </div>
         </div>
