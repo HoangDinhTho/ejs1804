@@ -27,5 +27,15 @@ app.post('/add-singer',(req,res)=>{
     listSinger.unshift(singer);
     res.redirect('/')
 })
+app.get('/update/:id',(req,res)=>{
+    //find singer by id
+    // const id = req.param('id')
+    const id = +req.params.id
+    const singer = listSinger.find(singer=>singer.id===id)
+    if(!singer) {
+        return res.send({error: 'Cannot find singer!'})
+    }
+    res.render('update',singer);
+})
 
 app.listen(3000);
