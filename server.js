@@ -41,12 +41,20 @@ app.post('/update',(req,res)=>{
     const { id, name, link, avatar } = req.body
     const singer = listSinger.find(singer=>singer.id==id)
     if(!singer) res.send({error:'Cannot find singer!'})
-    
+
     // singer.name = name;
     // singer.link = link;
     // singer.avatar = avatar;
     singer.updateData(name,link,avatar);
     res.redirect('/');
+})
+app.get('/delete/:id',(req,res)=>{
+    const id = req.params.id
+    const index = listSinger.findIndex(singer=> singer.id==id)
+    if(index<0) res.send({error:'Cannot find singer!'})
+    listSinger.splice(index,1);
+    res.redirect('/');
+
 })
 
 app.listen(3000);
