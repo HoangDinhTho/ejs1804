@@ -13,4 +13,8 @@ app.get('/',(req,res)=>{
     res.render('home', { listSinger, avatarLink, profileLink });
 })
 
+app.get('/add-singer',(req,res)=>{
+    res.render('add-singer');
+})
+
 app.listen(3000);
